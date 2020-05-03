@@ -25,7 +25,6 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-LOCAL_PATH := device/xiaomi/tulip
 
 # Architecture
 TARGET_ARCH := arm64
@@ -124,3 +123,26 @@ TW_INCLUDE_FUSE_EXFAT := true
 
 # NTFS Support
 TW_INCLUDE_FUSE_NTFS := true
+
+#Ignore Missing Dependencies
+ALLOW_MISSING_DEPENDENCIES=true
+
+#SHRP_Variables
+SHRP_PATH := device/xiaomi/tulip
+SHRP_MAINTAINER := OGHyperion
+SHRP_DEVICE_CODE := tulip
+SHRP_EDL_MODE := 1
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usbotg
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+SHRP_REC_TYPE := Treble
+SHRP_DEVICE_TYPE := A-Only
+SHRP_FLASH := 1
+
+# SHRP Padding Flag (Only for rounded corner devices.)
+SHRP_STATUSBAR_RIGHT_PADDING := 40
+SHRP_STATUSBAR_LEFT_PADDING := 40
+
+# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock
+SHRP_EXPRESS := true
